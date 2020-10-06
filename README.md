@@ -1,5 +1,7 @@
 # quarkus-vertx-api project
 
+Exploration of Quarkus.
+
 ## Bootstrap
 
 ```bash
