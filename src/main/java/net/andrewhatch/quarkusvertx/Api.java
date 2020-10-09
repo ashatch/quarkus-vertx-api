@@ -6,8 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/hello")
-public class api {
-
+public class Api {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {

@@ -10,7 +10,7 @@ brew install gu
 mvn io.quarkus:quarkus-maven-plugin:1.8.1.Final:create \
     -DprojectGroupId=net.andrewhatch.quarkus-vertx-api \
     -DprojectArtifactId=quarkus-vertx-api \
-    -DclassName="net.andrewhatch.quarkusvertx.api" \
+    -DclassName="net.andrewhatch.quarkusvertx.Api" \
     -Dpath="/hello"
 ```
 
@@ -55,4 +55,16 @@ docker run -i --rm -p 8080:8080 quarkus-vertx-api/api:latest
 ```bash
 docker build -f src/main/docker/Dockerfile.multistage -t quarkus-vertx-api/api .
 docker run -i --rm -p 8080:8080 quarkus-vertx-api/api:latest
+```
+
+## Switch to vertx
+
+```
+./mvnw quarkus:add-extension -Dextensions="vertx"
+```
+
+## Running
+
+```
+./mvnw quarkus:dev
 ```
