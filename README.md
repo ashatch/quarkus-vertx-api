@@ -68,3 +68,23 @@ docker run -i --rm -p 8080:8080 quarkus-vertx-api/api:latest
 ```
 ./mvnw quarkus:dev
 ```
+
+## GraphQL UI
+
+* http://localhost:8080/graphql-ui/
+
+## Reading list:
+
+* https://quarkus.io/guides/microprofile-health
+* https://www.youtube.com/watch?v=-1wijnrTxs0
+* https://quarkus.io/guides/microprofile-fault-tolerance
+* https://quarkus.io/guides/amazon-dynamodb
+* https://github.com/phillip-kruger/graphql-example
+* https://quarkus.io/blog/supersonic-subatomic-graphql/
+* https://github.com/wesleyfuchter/cqrs-quarkus-kafka
+* https://github.com/hasura/3factor
+* https://quarkus.io/guides/getting-started-reactive
+* https://smallrye.io/smallrye-mutiny/
+* https://quarkus.io/guides/config#yaml
+* https://quarkus.io/guides/logging
+* https://quarkus.io/guides/vertx

@@ -2,7 +2,4 @@ quarkus:
   vertx:
     prefer-native-transport: true
   log:
-    level: DEBUG
-    category:
-      "io.netty.util.internal.NativeLibraryLoader":
-        level: WARN
+    level: INFO

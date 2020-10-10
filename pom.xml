@@ -62,6 +62,10 @@
       <artifactId>netty-transport-native-kqueue</artifactId>
       <classifier>osx-x86_64</classifier>
     </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-graphql</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
