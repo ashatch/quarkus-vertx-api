@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  cass3:
+    container_name: cass3
+    image: "launcher.gcr.io/google/cassandra3"
+    ports:
+      - "7000:7000"
+      - "7001:7001"
+      - "7199:7199"
+      - "9042:9042"
+      - "9160:9160"
+      - "9404:9404"
+    volumes:
+        - ./docker-compose/services/cass3/var_lib_cassandra:/var/lib/cassandra
