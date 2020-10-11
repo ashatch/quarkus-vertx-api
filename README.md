@@ -73,6 +73,24 @@ docker run -i --rm -p 8080:8080 quarkus-vertx-api/api:latest
 
 * http://localhost:8080/graphql-ui/
 
+## Cassandra
+
+```
+docker run \                                                                                                                                                                            
+   --name local-cassandra-instance \
+   -p 7000:7000 \
+   -p 7001:7001 \
+   -p 7199:7199 \
+   -p 9042:9042 \
+   -p 9160:9160 \
+   -p 9404:9404 \
+   -d \
+   launcher.gcr.io/google/cassandra3
+
+docker exec -it local-cassandra-instance cqlsh -e "CREATE KEYSPACE IF NOT EXISTS k1 WITH replication = {'class':'SimpleStrategy', 'replication_factor':1}"
+docker exec -it local-cassandra-instance cqlsh -e "CREATE TABLE IF NOT EXISTS k1.bookmark(accountId text, folderId text, url text, label text, PRIMARY KEY((accountId), folderId, url))"
+```
+
 ## Reading list:
 
 * https://quarkus.io/guides/microprofile-health
@@ -88,3 +106,4 @@ docker run -i --rm -p 8080:8080 quarkus-vertx-api/api:latest
 * https://quarkus.io/guides/config#yaml
 * https://quarkus.io/guides/logging
 * https://quarkus.io/guides/vertx
+* https://developers.redhat.com/blog/2019/11/18/how-quarkus-brings-imperative-and-reactive-programming-together/
